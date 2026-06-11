@@ -15,7 +15,8 @@
     "start:server": "npm --prefix server start",
     "prisma:generate": "npm --prefix server run prisma:generate",
     "prisma:migrate": "npm --prefix server run prisma:migrate",
-    "prisma:seed": "npm --prefix server run prisma:seed"
+    "prisma:seed": "npm --prefix server run prisma:seed",
+    "postinstall": "npm run install:all"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
