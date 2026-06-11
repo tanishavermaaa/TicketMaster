@@ -62,8 +62,9 @@ router.post('/register', async (req: Request, res: Response) => {
     console.error('Registration error:', error);
     res.status(500).json({ 
       error: 'Internal server error', 
-      details: error.message,
-      code: error.code
+      details: error instanceof Error ? error.message : String(error),
+      code: error?.code || 'UNKNOWN_CODE',
+      stack: error instanceof Error ? error.stack : undefined
     });
   }
 });
@@ -116,8 +117,9 @@ router.post('/login', async (req: Request, res: Response) => {
     console.error('Login error:', error);
     res.status(500).json({ 
       error: 'Internal server error', 
-      details: error.message,
-      code: error.code
+      details: error instanceof Error ? error.message : String(error),
+      code: error?.code || 'UNKNOWN_CODE',
+      stack: error instanceof Error ? error.stack : undefined
     });
   }
 });
