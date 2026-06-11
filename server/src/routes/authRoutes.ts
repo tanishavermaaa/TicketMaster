@@ -58,9 +58,13 @@ router.post('/register', async (req: Request, res: Response) => {
         createdAt: user.createdAt
       }
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Registration error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ 
+      error: 'Internal server error', 
+      details: error.message,
+      code: error.code
+    });
   }
 });
 
@@ -108,9 +112,13 @@ router.post('/login', async (req: Request, res: Response) => {
         createdAt: user.createdAt
       }
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Login error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ 
+      error: 'Internal server error', 
+      details: error.message,
+      code: error.code
+    });
   }
 });
 
