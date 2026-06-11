@@ -56,7 +56,7 @@ const AppContent: React.FC = () => {
       return;
     }
 
-    const BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000' : '';
+    const BASE_URL = (import.meta.env.VITE_API_URL as string) || (window.location.hostname === 'localhost' ? 'http://localhost:5000' : '');
     const sseUrl = `${BASE_URL}/api/tickets/events?token=${token}`;
     const eventSource = new EventSource(sseUrl);
 
