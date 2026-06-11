@@ -4,6 +4,10 @@ A real-time support ticketing platform featuring automated AI-driven triage (pri
 
 ---
 
+Deployed Link : https://astonishing-dasik-0c8bc5.netlify.app/
+
+---
+
 ## 1. Environment Variables
 
 Create a `.env` file in the `server/` directory and configure the following variables:
