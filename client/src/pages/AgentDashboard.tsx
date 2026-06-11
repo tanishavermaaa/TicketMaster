@@ -204,7 +204,7 @@ export const AgentDashboard: React.FC = () => {
           <div className="glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <span style={{ fontSize: '0.85rem', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Avg Resolution</span>
             <span style={{ fontSize: '2.25rem', fontWeight: 800, fontFamily: 'var(--font-display)', color: 'var(--success)' }}>
-              {analytics.avgResolutionTimeHours}h
+              {analytics.avgResolutionTimeHours} hr
             </span>
           </div>
 
